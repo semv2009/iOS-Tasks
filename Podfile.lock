@@ -1,0 +1,33 @@
+PODS:
+  - QueryKit (0.13.0)
+  - Realm (2.4.3):
+    - Realm/Headers (= 2.4.3)
+  - Realm/Headers (2.4.3)
+  - RealmSwift (2.4.3):
+    - Realm (= 2.4.3)
+  - RxCocoa (3.2.0):
+    - RxSwift (~> 3.1)
+  - RxRealm (0.5.1):
+    - RealmSwift (~> 2.2)
+    - RxSwift (~> 3.1)
+  - RxSwift (3.2.0)
+
+DEPENDENCIES:
+  - QueryKit
+  - Realm
+  - RealmSwift
+  - RxCocoa (~> 3.0)
+  - RxRealm
+  - RxSwift (~> 3.0)
+
+SPEC CHECKSUMS:
+  QueryKit: 406c42b9b4eb5f8dab380a9e5bd9ef656542d1f4
+  Realm: e08d60b0048ccccd3949c8c28a92c4db5712d7e9
+  RealmSwift: 30d49739ccb3385d201242736ca4dda56aec9dfc
+  RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
+  RxRealm: c80d17d42fc362f4d8af4ac62de360b014be5c3f
+  RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+
+PODFILE CHECKSUM: fe2a95172b2cb1de386440cdf452e78a7efa1076
+
+COCOAPODS: 1.2.0
