@@ -32,7 +32,7 @@ class DefaultTasksNavigator: TasksNavigator {
     }
     
     func toCreateTask() {
-//        let navigator = DefaultCreatePostNavigator(navigationController: navigationController)
+        let navigator = DefaultCreatTaskNavigator(navigationController: navigationController)
 //        let viewModel = CreatePostViewModel(createPostUseCase: services.getCreatePostUseCase(),
 //                                            navigator: navigator)
 //        let vc = storyBoard.instantiateViewController(ofType: CreatePostViewController.self)

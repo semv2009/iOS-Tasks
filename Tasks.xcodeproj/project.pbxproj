@@ -40,6 +40,10 @@
 		EBAAC38C1E9A382300698D08 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC38A1E9A382300698D08 /* TaskTableViewCell.swift */; };
 		EBAAC38D1E9A382300698D08 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAAC38B1E9A382300698D08 /* TaskTableViewCell.xib */; };
 		EBAAC3901E9A3D8C00698D08 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC38F1E9A3D8C00698D08 /* Application.swift */; };
+		EBAAC3951E9AB0E200698D08 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC3931E9AB0E200698D08 /* CreateTaskViewController.swift */; };
+		EBAAC3961E9AB0E200698D08 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAAC3941E9AB0E200698D08 /* CreateTaskViewController.xib */; };
+		EBAAC3981E9AB45100698D08 /* CreateTaskNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC3971E9AB45100698D08 /* CreateTaskNavigator.swift */; };
+		EBAAC39A1E9AB4B900698D08 /* CreateTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */; };
 		EBED010B1E8FB0A300E99B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED010A1E8FB0A300E99B06 /* AppDelegate.swift */; };
 		EBED01121E8FB0A300E99B06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBED01111E8FB0A300E99B06 /* Assets.xcassets */; };
 		EBED01151E8FB0A300E99B06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBED01131E8FB0A300E99B06 /* LaunchScreen.storyboard */; };
@@ -119,6 +123,10 @@
 		EBAAC38A1E9A382300698D08 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TaskTableViewCell.swift; path = Scenes/AllTasks/TaskCell/TaskTableViewCell.swift; sourceTree = "<group>"; };
 		EBAAC38B1E9A382300698D08 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskTableViewCell.xib; path = Scenes/AllTasks/TaskCell/TaskTableViewCell.xib; sourceTree = "<group>"; };
 		EBAAC38F1E9A3D8C00698D08 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Application.swift; path = Application/Application.swift; sourceTree = "<group>"; };
+		EBAAC3931E9AB0E200698D08 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskViewController.swift; path = Scenes/CreateTask/CreateTaskViewController/CreateTaskViewController.swift; sourceTree = "<group>"; };
+		EBAAC3941E9AB0E200698D08 /* CreateTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateTaskViewController.xib; path = Scenes/CreateTask/CreateTaskViewController/CreateTaskViewController.xib; sourceTree = "<group>"; };
+		EBAAC3971E9AB45100698D08 /* CreateTaskNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskNavigator.swift; path = Scenes/CreateTask/CreateTaskNavigator.swift; sourceTree = "<group>"; };
+		EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskViewModel.swift; path = Scenes/CreateTask/CreateTaskViewModel.swift; sourceTree = "<group>"; };
 		EBED01071E8FB0A300E99B06 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBED010A1E8FB0A300E99B06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBED01111E8FB0A300E99B06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -286,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				EBAAC36A1E9A19F100698D08 /* AllTasls */,
+				EBAAC3911E9AB08C00698D08 /* CreateTask */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -326,6 +335,25 @@
 				EBED010A1E8FB0A300E99B06 /* AppDelegate.swift */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		EBAAC3911E9AB08C00698D08 /* CreateTask */ = {
+			isa = PBXGroup;
+			children = (
+				EBAAC3921E9AB0A300698D08 /* CreateTaskViewController */,
+				EBAAC3971E9AB45100698D08 /* CreateTaskNavigator.swift */,
+				EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */,
+			);
+			name = CreateTask;
+			sourceTree = "<group>";
+		};
+		EBAAC3921E9AB0A300698D08 /* CreateTaskViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EBAAC3931E9AB0E200698D08 /* CreateTaskViewController.swift */,
+				EBAAC3941E9AB0E200698D08 /* CreateTaskViewController.xib */,
+			);
+			name = CreateTaskViewController;
 			sourceTree = "<group>";
 		};
 		EBED00FE1E8FB0A300E99B06 = {
@@ -548,6 +576,7 @@
 				EBAAC38D1E9A382300698D08 /* TaskTableViewCell.xib in Resources */,
 				EBED01151E8FB0A300E99B06 /* LaunchScreen.storyboard in Resources */,
 				EBED01121E8FB0A300E99B06 /* Assets.xcassets in Resources */,
+				EBAAC3961E9AB0E200698D08 /* CreateTaskViewController.xib in Resources */,
 				EBAAC3711E9A293A00698D08 /* TasksViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,10 +724,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAAC3981E9AB45100698D08 /* CreateTaskNavigator.swift in Sources */,
 				EBAAC3351E9980E600698D08 /* Reusable.swift in Sources */,
 				EBAAC3701E9A293A00698D08 /* TasksViewController.swift in Sources */,
 				EBAAC3901E9A3D8C00698D08 /* Application.swift in Sources */,
 				EBAAC38C1E9A382300698D08 /* TaskTableViewCell.swift in Sources */,
+				EBAAC39A1E9AB4B900698D08 /* CreateTaskViewModel.swift in Sources */,
 				EBAAC36C1E9A27A500698D08 /* TasksNavigator.swift in Sources */,
 				EBAAC3341E9980E600698D08 /* Observable+Ext.swift in Sources */,
 				EBAAC3731E9A2A8700698D08 /* TasksViewModel.swift in Sources */,
@@ -706,6 +737,7 @@
 				EBAAC3321E9980E600698D08 /* ActivityIndicator.swift in Sources */,
 				EBED010B1E8FB0A300E99B06 /* AppDelegate.swift in Sources */,
 				EBED012C1E99593900E99B06 /* ViewModelType.swift in Sources */,
+				EBAAC3951E9AB0E200698D08 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
