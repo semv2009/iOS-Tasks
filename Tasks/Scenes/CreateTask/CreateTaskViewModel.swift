@@ -32,13 +32,12 @@ class CreateTaskViewModel {
         
         let importanceText = input.importance
             .map { $0.description }
-        importanceText.or
         let dateText = input.date
             .map { $0.dateString }
         let solved = input.solved
             .map { $0 == 0 ? false : true }
         
-        let saveProperty = Driver.combineLatest(input.title, input.details, importanceText.asDriver(onErrorJustReturn: ""), input.date.asDriver(onErrorJustReturn: Date()), solved) {
+        let saveProperty = Driver.combineLatest(input.title, input.details, input.importanceString , input.dateString, solved) {
             $0
         }
         let save = input.saveTrigger.withLatestFrom(saveProperty)
@@ -47,7 +46,7 @@ class CreateTaskViewModel {
                      title: title,
                      isExecute: solved,
                      content: details,
-                     createDate: date,
+                     createDate: date.calculatedDate,
                      importance: importance)
             }
             .flatMapLatest { [unowned self] in
@@ -73,6 +72,8 @@ extension CreateTaskViewModel {
         let importance: Observable<Importance>
         let date: Observable<Date>
         let solved: Driver<Int>
+        let importanceString: Driver<String>
+        let dateString: Driver<String>
     }
     
     struct Output {

@@ -75,7 +75,9 @@ class CreateTaskViewController: UIViewController {
                                   details: contentTextView.rx.text.orEmpty.asDriver(),
                                   importance: importanceViewPicker.itemSelected,
                                   date: datePicker.rx.date.asObservable(),
-                                  solved: executeSegmentController.rx.value.asDriver())
+                                  solved: executeSegmentController.rx.value.asDriver(),
+                                  importanceString: importanceTextField.rx.text.orEmpty.asDriver(),
+                                  dateString: dateTextField.rx.text.orEmpty.asDriver())
         
         let output = viewModel.transform(input: input)
         
@@ -87,6 +89,7 @@ class CreateTaskViewController: UIViewController {
         output.importanceText
             .bindTo(importanceTextField.rx.text)
             .disposed(by: disposeBag)
+        importanceTextField.text = ""
         
         output.dateText
             .bindTo(dateTextField.rx.text)
@@ -94,5 +97,3 @@ class CreateTaskViewController: UIViewController {
         dateTextField.text = ""
     }
 }
-
-
