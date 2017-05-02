@@ -22,6 +22,10 @@ extension UITableView {
         }
         return cell
     }
+    
+    func register(cell cellType: UITableViewCell.Type) {
+        register(UINib(nibName: cellType.reuseID, bundle: nil), forCellReuseIdentifier: cellType.reuseID)
+    }
 }
 
 extension UIStoryboard {

@@ -27,27 +27,34 @@ class TasksViewController: UIViewController {
     }
     
     func configureBarButtonitem() {
-        createTaskButton = UIBarButtonItem(title: "Create Task", style: .done, target: self, action: nil)
+        createTaskButton = UIBarButtonItem(title: "Create", style: .done, target: self, action: nil)
         navigationItem.rightBarButtonItem =  createTaskButton
     }
     
     private func configureTableView() {
         tableView.estimatedRowHeight = 64
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: TaskTableViewCell.reuseID)
+        tableView.register(cell: TaskTableViewCell.self)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: { indexPath in
+                print(indexPath)
+            })
+            .disposed(by: disposebag)
     }
     
     private func bindViewModel() {
         let input = TasksViewModel.Input(trigger: Driver.just(),
-                                         createPostTrigger: createTaskButton.rx.tap.asDriver(),
+                                         createTaskTrigger: createTaskButton.rx.tap.asDriver(),
                                          selection: tableView.rx.itemSelected.asDriver())
+
         let output = viewModel.transform(input: input)
         
         output.tasks.drive(tableView.rx.items(cellIdentifier: TaskTableViewCell.reuseID, cellType: TaskTableViewCell.self)) { tv, item, cell in
             cell.configureCell(with: item)
         }.addDisposableTo(disposebag)
         
-        output.createPost.drive().addDisposableTo(disposebag)
-        output.selectedPost.drive().addDisposableTo(disposebag)
+        output.createTask.drive().addDisposableTo(disposebag)
+        output.selectTask.drive().addDisposableTo(disposebag)
     }
 }

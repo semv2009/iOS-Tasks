@@ -11,20 +11,7 @@ import Domain
 import RxSwift
 import RxCocoa
 
-final class TasksViewModel: ViewModelType {
-    struct Input {
-        let trigger: Driver<Void>
-        let createPostTrigger: Driver<Void>
-        let selection: Driver<IndexPath>
-    }
-    struct Output {
-        let fetching: Driver<Bool>
-        let tasks: Driver<[Task]>
-        let createPost: Driver<Void>
-        let selectedPost: Driver<Task>
-        let error: Driver<Error>
-    }
-    
+class TasksViewModel: ViewModelType {
     private let useCase: AllTasksUseCase
     private let navigator: TasksNavigator
     
@@ -37,7 +24,7 @@ final class TasksViewModel: ViewModelType {
         let activityIndicator = ActivityIndicator()
         let errorTracker = ErrorTracker()
         let tasks = input.trigger.flatMapLatest {
-            return self.useCase.tasks()
+            self.useCase.tasks()
                 .trackActivity(activityIndicator)
                 .trackError(errorTracker)
                 .asDriver(onErrorJustReturn: [])
@@ -45,18 +32,34 @@ final class TasksViewModel: ViewModelType {
         
         let fetching = activityIndicator.asDriver()
         let errors = errorTracker.asDriver()
-        let selectedPost = input.selection
+        let selectTask = input.selection
             .withLatestFrom(tasks) { (indexPath, posts) -> Task in
-                return posts[indexPath.row]
+                posts[indexPath.row]
             }
             .do(onNext: navigator.toTask)
-        let createPost = input.createPostTrigger
+        let createTask = input.createTaskTrigger
             .do(onNext: navigator.toCreateTask)
         
         return Output(fetching: fetching,
                       tasks: tasks,
-                      createPost: createPost,
-                      selectedPost: selectedPost,
+                      createTask: createTask,
+                      selectTask: selectTask,
                       error: errors)
+    }
+}
+
+extension TasksViewModel {
+    struct Input {
+        let trigger: Driver<Void>
+        let createTaskTrigger: Driver<Void>
+        let selection: Driver<IndexPath>
+    }
+    
+    struct Output {
+        let fetching: Driver<Bool>
+        let tasks: Driver<[Task]>
+        let createTask: Driver<Void>
+        let selectTask: Driver<Task>
+        let error: Driver<Error>
     }
 }

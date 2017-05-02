@@ -18,5 +18,7 @@ class TaskTableViewCell: UITableViewCell {
     func configureCell(with task: Task) {
         titleLabel.text = task.title
         contentLabel.text = task.content
+        importanceLabel.text =  task.createDate?.dateString
+        dateLabel.text = "\(task.isExecute)"
     }
 }

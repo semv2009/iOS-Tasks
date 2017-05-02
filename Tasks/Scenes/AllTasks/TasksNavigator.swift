@@ -33,12 +33,11 @@ class DefaultTasksNavigator: TasksNavigator {
     
     func toCreateTask() {
         let navigator = DefaultCreatTaskNavigator(navigationController: navigationController)
-//        let viewModel = CreatePostViewModel(createPostUseCase: services.getCreatePostUseCase(),
-//                                            navigator: navigator)
-//        let vc = storyBoard.instantiateViewController(ofType: CreatePostViewController.self)
-//        vc.viewModel = viewModel
-//        let nc = UINavigationController(rootViewController: vc)
-//        navigationController.present(nc, animated: true, completion: nil)
+        let viewModel = CreateTaskViewModel(createTaskUseCase: services.getCreateTaskUseCase(),
+                                            navigator: navigator)
+        let creareTaskViewController = CreateTaskViewController()
+        creareTaskViewController.viewModel = viewModel
+        navigationController.present(UINavigationController(rootViewController: creareTaskViewController), animated: true, completion: nil)
     }
     
     func toTask(_ task: Task) {

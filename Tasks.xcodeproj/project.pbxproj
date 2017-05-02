@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		36BA97F20FED32F74090F1BA /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2017EC5A8639C31FCCE66DD0 /* Pods_Domain.framework */; };
 		C2383FF292776E39A6407BDB /* Pods_Tasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E663D1B6CD709ACDBE7897 /* Pods_Tasks.framework */; };
+		EB1B53A31EB7493A00A92DA6 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53A21EB7493A00A92DA6 /* PickerTextField.swift */; };
+		EB1B53A51EB798F900A92DA6 /* NativePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53A41EB798F900A92DA6 /* NativePickerView.swift */; };
+		EB1B53A71EB7A19200A92DA6 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53A61EB7A19200A92DA6 /* Functions.swift */; };
+		EB1B53AB1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */; };
+		EB1B53AD1EB7B26000A92DA6 /* String+DateConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */; };
 		EBAAC30C1E997F1700698D08 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = EBAAC30A1E997F1700698D08 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBAAC30F1E997F1700698D08 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC3081E997F1700698D08 /* Domain.framework */; };
 		EBAAC3101E997F1700698D08 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC3081E997F1700698D08 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -92,6 +97,11 @@
 		AEE027A9EE84FE76CE1C3E23 /* Pods-Tasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tasks/Pods-Tasks.release.xcconfig"; sourceTree = "<group>"; };
 		DF5A40D79253A8D1DACF34EC /* Pods_RealmPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E081DEA4C5DA5E2084679EC6 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
+		EB1B53A21EB7493A00A92DA6 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerTextField.swift; path = Utility/View/PickerTextField.swift; sourceTree = "<group>"; };
+		EB1B53A41EB798F900A92DA6 /* NativePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NativePickerView.swift; path = Utility/View/NativePickerView.swift; sourceTree = "<group>"; };
+		EB1B53A61EB7A19200A92DA6 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+stringConvertable.swift"; path = "Utility/Extension/NSDate+stringConvertable.swift"; sourceTree = "<group>"; };
+		EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+DateConvertable.swift"; path = "Utility/Extension/String+DateConvertable.swift"; sourceTree = "<group>"; };
 		EBAAC3081E997F1700698D08 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAAC30A1E997F1700698D08 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		EBAAC30B1E997F1700698D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,6 +199,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EB1B53A11EB748F400A92DA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB1B53A21EB7493A00A92DA6 /* PickerTextField.swift */,
+				EB1B53A41EB798F900A92DA6 /* NativePickerView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EB1B53A91EB7B16400A92DA6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */,
+				EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		EB44B2371E99761300F36141 /* Entries */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,10 +297,13 @@
 		EBAAC32D1E9980DA00698D08 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				EB1B53A91EB7B16400A92DA6 /* Extension */,
+				EB1B53A11EB748F400A92DA6 /* View */,
 				EBAAC32E1E9980E600698D08 /* ActivityIndicator.swift */,
 				EBAAC32F1E9980E600698D08 /* ErrorTracker.swift */,
 				EBAAC3301E9980E600698D08 /* Observable+Ext.swift */,
 				EBAAC3311E9980E600698D08 /* Reusable.swift */,
+				EB1B53A61EB7A19200A92DA6 /* Functions.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -725,6 +756,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBAAC3981E9AB45100698D08 /* CreateTaskNavigator.swift in Sources */,
+				EB1B53A51EB798F900A92DA6 /* NativePickerView.swift in Sources */,
 				EBAAC3351E9980E600698D08 /* Reusable.swift in Sources */,
 				EBAAC3701E9A293A00698D08 /* TasksViewController.swift in Sources */,
 				EBAAC3901E9A3D8C00698D08 /* Application.swift in Sources */,
@@ -734,10 +766,14 @@
 				EBAAC3341E9980E600698D08 /* Observable+Ext.swift in Sources */,
 				EBAAC3731E9A2A8700698D08 /* TasksViewModel.swift in Sources */,
 				EBAAC3331E9980E600698D08 /* ErrorTracker.swift in Sources */,
+				EB1B53A71EB7A19200A92DA6 /* Functions.swift in Sources */,
 				EBAAC3321E9980E600698D08 /* ActivityIndicator.swift in Sources */,
+				EB1B53A31EB7493A00A92DA6 /* PickerTextField.swift in Sources */,
 				EBED010B1E8FB0A300E99B06 /* AppDelegate.swift in Sources */,
 				EBED012C1E99593900E99B06 /* ViewModelType.swift in Sources */,
 				EBAAC3951E9AB0E200698D08 /* CreateTaskViewController.swift in Sources */,
+				EB1B53AB1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift in Sources */,
+				EB1B53AD1EB7B26000A92DA6 /* String+DateConvertable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
