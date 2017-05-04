@@ -17,7 +17,7 @@ final class RMTask: Object {
     dynamic var isExecute: Bool = false
     dynamic var content: String? = nil
     dynamic var createDate: Date? = nil
-    dynamic var importance: String? = nil
+    dynamic var importance: Int = 0
     
     override class func primaryKey() -> String? {
         return "uid"

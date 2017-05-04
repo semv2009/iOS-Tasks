@@ -1,0 +1,15 @@
+
+/* Class = "UITextField"; placeholder = "Date"; ObjectID = "SjN-2G-sfy"; */
+"SjN-2G-sfy.placeholder" = "Дата";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "dq3-dL-Mg1"; */
+"dq3-dL-Mg1.placeholder" = "Заголовок";
+
+/* Class = "UITextField"; placeholder = "Importance"; ObjectID = "i7S-WK-OpJ"; */
+"i7S-WK-OpJ.placeholder" = "Важность";
+
+/* Class = "UISegmentedControl"; xWH-K4-uAM.segmentTitles[0] = "Unsolved"; ObjectID = "xWH-K4-uAM"; */
+"xWH-K4-uAM.segmentTitles[0]" = "Не решено";
+
+/* Class = "UISegmentedControl"; xWH-K4-uAM.segmentTitles[1] = "Solved"; ObjectID = "xWH-K4-uAM"; */
+"xWH-K4-uAM.segmentTitles[1]" = "Решено";

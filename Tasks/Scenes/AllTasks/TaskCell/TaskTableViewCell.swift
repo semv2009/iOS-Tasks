@@ -18,12 +18,22 @@ class TaskTableViewCell: UITableViewCell {
     func configureCell(with task: Task) {
         titleLabel.text = task.title
         contentLabel.text = task.content
-        importanceLabel.text =  task.importance
         dateLabel.text = task.createDate?.dateString
         
         if task.isExecute {
             titleLabel.setCrossOutText(task.title)
             contentLabel.setCrossOutText(task.content)
         }
+        
+        guard let importance = Importance(rawValue: task.importance) else { return }
+        switch importance {
+        case .low:
+            importanceLabel.backgroundColor = UIColor.blue
+        case .normal:
+            importanceLabel.backgroundColor = UIColor.green
+        case .high:
+            importanceLabel.backgroundColor = UIColor.red
+        }
+        importanceLabel.text =  importance.description
     }
 }

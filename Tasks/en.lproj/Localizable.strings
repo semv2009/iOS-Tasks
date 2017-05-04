@@ -1,0 +1,16 @@
+/* 
+  Localized.strings
+  Tasks
+
+  Created by Семен Никулин on 05.05.17.
+  Copyright © 2017 niksemv. All rights reserved.
+*/
+
+"Create" = "Create";
+"Cancel" = "Cancel";
+"To-do List" = "To-do List";
+"Create" = "Create";
+"Save" = "Save";
+"Low" = "Low";
+"Normal" = "Normal";
+"High" = "High";

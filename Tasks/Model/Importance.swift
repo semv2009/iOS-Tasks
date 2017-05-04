@@ -8,16 +8,34 @@
 
 import Foundation
 
-enum Importance: String, CustomStringConvertible {
-    case low = "Low"
-    case normal = "Normal"
-    case hight = "Hight"
+enum Importance: Int, CustomStringConvertible {
+    case low
+    case normal
+    case high
     
     var description: String {
-        return self.rawValue
+        switch self {
+        case .low:
+            return NSLocalizedString("Low", comment: "")
+        case .normal:
+            return NSLocalizedString("Normal", comment: "")
+        case .high:
+            return NSLocalizedString("High", comment: "")
+        }
     }
     
     static var source: [Importance] {
-        return [.low, .normal, .hight]
+        return [.low, .normal, .high]
+    }
+    
+    var order: Int {
+        switch self {
+        case .low:
+            return 0
+        case .normal:
+            return 1
+        case .high:
+            return 2
+        }
     }
 }

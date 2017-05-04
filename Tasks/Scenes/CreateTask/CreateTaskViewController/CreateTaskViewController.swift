@@ -34,6 +34,7 @@ class CreateTaskViewController: UIViewController {
         bindViewModel()
         bindTitleChanged()
         configureTextFields()
+        setDate()
     }
     
     func configureTextFields() {
@@ -47,10 +48,25 @@ class CreateTaskViewController: UIViewController {
         contentTextView.layer.cornerRadius = 5.0
     }
     
+    func setDate() {
+        titleTextField.text = viewModel.task.title
+        contentTextView.text = viewModel.task.content ?? ""
+        if let date = viewModel.task.createDate {
+            datePicker.setDate(date, animated: false)
+            dateTextField.text = date.dateString
+        }
+        executeSegmentController.selectedSegmentIndex = viewModel.task.isExecute ? 1 : 0
+        
+        guard let importance = Importance(rawValue: viewModel.task.importance) else { return }
+        importanceViewPicker.selectRow(importance.order, inComponent: 0, animated: true)
+        importanceTextField.text = importance.description
+        
+    }
+    
     func configureBarButtonItems() {
-        saveBarButton = UIBarButtonItem(title: "Save", style: .done, target: self, action: nil)
+        saveBarButton = UIBarButtonItem(title: NSLocalizedString("Save", comment: ""), style: .done, target: self, action: nil)
         navigationItem.rightBarButtonItem =  saveBarButton
-        cancelBarButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: nil)
+        cancelBarButton = UIBarButtonItem(title: NSLocalizedString("Cancel", comment: ""), style: .done, target: self, action: nil)
         navigationItem.leftBarButtonItem =  cancelBarButton
     }
     
@@ -69,7 +85,7 @@ class CreateTaskViewController: UIViewController {
                                   importance: importanceViewPicker.itemSelected,
                                   date: datePicker.rx.date.asObservable(),
                                   solved: executeSegmentController.rx.value.asDriver(),
-                                  importanceString: importanceTextField.rx.text.orEmpty.asDriver(),
+                                  importanceString: importanceTextField.rx.value.orEmpty.asDriver(),
                                   dateString: dateTextField.rx.value.orEmpty.asDriver())
         
         let output = viewModel.transform(input: input)

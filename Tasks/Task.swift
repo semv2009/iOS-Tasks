@@ -20,20 +20,29 @@ public struct Task {
     public let isExecute: Bool
     public let content: String?
     public let createDate: Date?
-    public let importance: String?
+    public let importance: Int
     
     public init(uid: String,
                 title: String,
                 isExecute: Bool,
                 content: String?,
                 createDate: Date?,
-                importance: String?) {
+                importance: Int) {
         self.uid = uid
         self.title = title
         self.isExecute = isExecute
         self.content = content
         self.createDate = createDate
         self.importance = importance
+    }
+    
+    public init() {
+        self.uid = UUID().uuidString
+        self.title = ""
+        self.isExecute = false
+        self.content = ""
+        self.createDate = nil
+        self.importance = -1
     }
 }
 

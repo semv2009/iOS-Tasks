@@ -1,0 +1,15 @@
+
+/* Class = "UITextField"; placeholder = "Date"; ObjectID = "SjN-2G-sfy"; */
+"SjN-2G-sfy.placeholder" = "Date";
+
+/* Class = "UITextField"; placeholder = "Title"; ObjectID = "dq3-dL-Mg1"; */
+"dq3-dL-Mg1.placeholder" = "Title";
+
+/* Class = "UITextField"; placeholder = "Importance"; ObjectID = "i7S-WK-OpJ"; */
+"i7S-WK-OpJ.placeholder" = "Importance";
+
+/* Class = "UISegmentedControl"; xWH-K4-uAM.segmentTitles[0] = "Unsolved"; ObjectID = "xWH-K4-uAM"; */
+"xWH-K4-uAM.segmentTitles[0]" = "Unsolved";
+
+/* Class = "UISegmentedControl"; xWH-K4-uAM.segmentTitles[1] = "Solved"; ObjectID = "xWH-K4-uAM"; */
+"xWH-K4-uAM.segmentTitles[1]" = "Solved";

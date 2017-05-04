@@ -41,5 +41,11 @@ class DefaultTasksNavigator: TasksNavigator {
     }
     
     func toTask(_ task: Task) {
+        let navigator = DefaultCreatTaskNavigator(navigationController: navigationController)
+        let viewModel = CreateTaskViewModel(task: task, createTaskUseCase: services.getCreateTaskUseCase(),
+                                            navigator: navigator)
+        let creareTaskViewController = CreateTaskViewController()
+        creareTaskViewController.viewModel = viewModel
+        navigationController.present(UINavigationController(rootViewController: creareTaskViewController), animated: true, completion: nil)
     }
 }

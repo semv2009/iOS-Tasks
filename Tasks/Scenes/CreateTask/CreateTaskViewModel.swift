@@ -14,8 +14,15 @@ import Domain
 class CreateTaskViewModel {
     private let createTaskUseCase: SaveTaskUseCase
     private let navigator: CreateTaskNavigator
+    public var task = Task()
     
     init(createTaskUseCase: SaveTaskUseCase, navigator: CreateTaskNavigator) {
+        self.createTaskUseCase = createTaskUseCase
+        self.navigator = navigator
+    }
+    
+    init(task: Task, createTaskUseCase: SaveTaskUseCase, navigator: CreateTaskNavigator) {
+        self.task = task
         self.createTaskUseCase = createTaskUseCase
         self.navigator = navigator
     }
@@ -35,21 +42,23 @@ class CreateTaskViewModel {
         let activityIndicator = ActivityIndicator()
         
         let canSave = Driver.combineLatest(titleAndDetails, activityIndicator.asDriver()) {
-            return !$0.0.isEmpty && !$0.1.isEmpty && !$1
+            return ($0.0.characters.count > 5) && !$0.1.isEmpty && !$1
         }
         
-        let saveProperty = Driver.combineLatest(input.title, input.details, input.importanceString , input.dateString, solved) {
+        let saveProperty = Driver.combineLatest(input.title, input.details, input.importance.asDriver(onErrorJustReturn: Importance.low) , input.dateString, solved) {
             $0
         }
-        let save = input.saveTrigger.withLatestFrom(saveProperty)
-            .map { (title, details, importance, date, solved) in
-                Task(uid: UUID().uuidString,
-                     title: title,
-                     isExecute: solved,
-                     content: details,
-                     createDate: date.calculatedDate,
-                     importance: importance)
-            }
+        
+        let taskSave = Driver.combineLatest(Driver.just(self.task), saveProperty) { (task, property) -> Task in
+            return Task(uid: task.uid,
+                        title: property.0,
+                        isExecute: property.4,
+                        content: property.1,
+                        createDate: property.3.calculatedDate,
+                        importance: property.2.rawValue)
+            }.startWith(self.task)
+        
+        let save = input.saveTrigger.withLatestFrom(taskSave)
             .flatMapLatest { [unowned self] in
                 self.createTaskUseCase.save(task: $0)
                     .trackActivity(activityIndicator)
@@ -60,7 +69,7 @@ class CreateTaskViewModel {
         let dismiss = input.cancelTrigger
             .do(onNext: navigator.toTasks)
         
-        return Output(save: save, dismiss: dismiss, saveEnabled: canSave, importanceText: importanceText, dateText: dateText)
+        return Output(save: save, dismiss: dismiss, saveEnabled: canSave, importanceText: importanceText.startWith("hello"), dateText: dateText)
     }
 }
 

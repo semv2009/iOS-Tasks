@@ -20,14 +20,14 @@ class TasksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Todo-List"
+        title = NSLocalizedString("To-do List", comment: "")
         configureBarButtonitem()
         configureTableView()
         bindViewModel()
     }
     
     func configureBarButtonitem() {
-        createTaskButton = UIBarButtonItem(title: "Create", style: .done, target: self, action: nil)
+        createTaskButton = UIBarButtonItem(title: NSLocalizedString("Create", comment: ""), style: .done, target: self, action: nil)
         navigationItem.rightBarButtonItem =  createTaskButton
     }
     
@@ -38,9 +38,11 @@ class TasksViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        let selectItem = tableView.rx.itemSelected.asDriver()
+            .do(onNext: { self.tableView.deselectRow(at: $0, animated: false) })
         let input = TasksViewModel.Input(trigger: Driver.just(),
                                          createTaskTrigger: createTaskButton.rx.tap.asDriver(),
-                                         selection: tableView.rx.itemSelected.asDriver())
+                                         selection: selectItem)
 
         let output = viewModel.transform(input: input)
         

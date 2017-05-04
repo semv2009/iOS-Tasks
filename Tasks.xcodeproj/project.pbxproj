@@ -16,6 +16,8 @@
 		EB1B53AB1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */; };
 		EB1B53AD1EB7B26000A92DA6 /* String+DateConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */; };
 		EB82A03E1EBB99B5005A7D9E /* Importance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82A03D1EBB99B5005A7D9E /* Importance.swift */; };
+		EB82A0411EBBBC2B005A7D9E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB82A0431EBBBC2B005A7D9E /* Localizable.strings */; };
+		EB890B291EBBC37F003F4824 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB890B2B1EBBC37F003F4824 /* CreateTaskViewController.xib */; };
 		EBAAC30C1E997F1700698D08 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = EBAAC30A1E997F1700698D08 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBAAC30F1E997F1700698D08 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC3081E997F1700698D08 /* Domain.framework */; };
 		EBAAC3101E997F1700698D08 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC3081E997F1700698D08 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -48,7 +50,6 @@
 		EBAAC38D1E9A382300698D08 /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAAC38B1E9A382300698D08 /* TaskTableViewCell.xib */; };
 		EBAAC3901E9A3D8C00698D08 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC38F1E9A3D8C00698D08 /* Application.swift */; };
 		EBAAC3951E9AB0E200698D08 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC3931E9AB0E200698D08 /* CreateTaskViewController.swift */; };
-		EBAAC3961E9AB0E200698D08 /* CreateTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBAAC3941E9AB0E200698D08 /* CreateTaskViewController.xib */; };
 		EBAAC3981E9AB45100698D08 /* CreateTaskNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC3971E9AB45100698D08 /* CreateTaskNavigator.swift */; };
 		EBAAC39A1E9AB4B900698D08 /* CreateTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */; };
 		EBED010B1E8FB0A300E99B06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBED010A1E8FB0A300E99B06 /* AppDelegate.swift */; };
@@ -106,6 +107,12 @@
 		EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+stringConvertable.swift"; path = "Utility/Extension/NSDate+stringConvertable.swift"; sourceTree = "<group>"; };
 		EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+DateConvertable.swift"; path = "Utility/Extension/String+DateConvertable.swift"; sourceTree = "<group>"; };
 		EB82A03D1EBB99B5005A7D9E /* Importance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Importance.swift; path = Model/Importance.swift; sourceTree = "<group>"; };
+		EB82A0441EBBBC47005A7D9E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EB82A0451EBBBC47005A7D9E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB890B281EBBBFC8003F4824 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EB890B2D1EBBC385003F4824 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/CreateTaskViewController.strings; sourceTree = "<group>"; };
+		EB890B2E1EBBC44F003F4824 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CreateTaskViewController.xib; sourceTree = "<group>"; };
+		EB890B2F1EBBC473003F4824 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CreateTaskViewController.strings; sourceTree = "<group>"; };
 		EBAAC3081E997F1700698D08 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAAC30A1E997F1700698D08 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		EBAAC30B1E997F1700698D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,7 +145,6 @@
 		EBAAC38B1E9A382300698D08 /* TaskTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TaskTableViewCell.xib; path = Scenes/AllTasks/TaskCell/TaskTableViewCell.xib; sourceTree = "<group>"; };
 		EBAAC38F1E9A3D8C00698D08 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Application.swift; path = Application/Application.swift; sourceTree = "<group>"; };
 		EBAAC3931E9AB0E200698D08 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskViewController.swift; path = Scenes/CreateTask/CreateTaskViewController/CreateTaskViewController.swift; sourceTree = "<group>"; };
-		EBAAC3941E9AB0E200698D08 /* CreateTaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CreateTaskViewController.xib; path = Scenes/CreateTask/CreateTaskViewController/CreateTaskViewController.xib; sourceTree = "<group>"; };
 		EBAAC3971E9AB45100698D08 /* CreateTaskNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskNavigator.swift; path = Scenes/CreateTask/CreateTaskNavigator.swift; sourceTree = "<group>"; };
 		EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateTaskViewModel.swift; path = Scenes/CreateTask/CreateTaskViewModel.swift; sourceTree = "<group>"; };
 		EBED01071E8FB0A300E99B06 /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,7 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				EBAAC3931E9AB0E200698D08 /* CreateTaskViewController.swift */,
-				EBAAC3941E9AB0E200698D08 /* CreateTaskViewController.xib */,
+				EB890B2B1EBBC37F003F4824 /* CreateTaskViewController.xib */,
 				EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */,
 			);
 			name = CreateTaskViewController;
@@ -433,6 +439,7 @@
 				EBED01111E8FB0A300E99B06 /* Assets.xcassets */,
 				EBED01131E8FB0A300E99B06 /* LaunchScreen.storyboard */,
 				EBED01161E8FB0A300E99B06 /* Info.plist */,
+				EB82A0431EBBBC2B005A7D9E /* Localizable.strings */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -586,6 +593,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = EBED00FE1E8FB0A300E99B06;
 			productRefGroup = EBED01081E8FB0A300E99B06 /* Products */;
@@ -618,10 +626,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB82A0411EBBBC2B005A7D9E /* Localizable.strings in Resources */,
 				EBAAC38D1E9A382300698D08 /* TaskTableViewCell.xib in Resources */,
 				EBED01151E8FB0A300E99B06 /* LaunchScreen.storyboard in Resources */,
 				EBED01121E8FB0A300E99B06 /* Assets.xcassets in Resources */,
-				EBAAC3961E9AB0E200698D08 /* CreateTaskViewController.xib in Resources */,
+				EB890B291EBBC37F003F4824 /* CreateTaskViewController.xib in Resources */,
 				EBAAC3711E9A293A00698D08 /* TasksViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -809,10 +818,31 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EB82A0431EBBBC2B005A7D9E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB82A0451EBBBC47005A7D9E /* ru */,
+				EB890B281EBBBFC8003F4824 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EB890B2B1EBBC37F003F4824 /* CreateTaskViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB890B2D1EBBC385003F4824 /* ru */,
+				EB890B2E1EBBC44F003F4824 /* Base */,
+				EB890B2F1EBBC473003F4824 /* en */,
+			);
+			name = CreateTaskViewController.xib;
+			path = Scenes/CreateTask/CreateTaskViewController;
+			sourceTree = "<group>";
+		};
 		EBED01131E8FB0A300E99B06 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EBED01141E8FB0A300E99B06 /* Base */,
+				EB82A0441EBBBC47005A7D9E /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -922,6 +952,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -973,6 +1004,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
