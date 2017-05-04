@@ -21,21 +21,22 @@ class CreateTaskViewModel {
     }
     
     func transform(input: Input) -> Output {
-        let titleAndDetails = Driver.combineLatest(input.title, input.details) {
-            $0
-        }
-        let activityIndicator = ActivityIndicator()
-        
-        let canSave = Driver.combineLatest(titleAndDetails, activityIndicator.asDriver()) {
-            return !$0.0.isEmpty && !$0.1.isEmpty && !$1
-        }
-        
         let importanceText = input.importance
             .map { $0.description }
         let dateText = input.date
             .map { $0.dateString }
         let solved = input.solved
             .map { $0 == 0 ? false : true }
+        
+        let titleAndDetails = Driver.combineLatest(input.title, input.importanceString) {
+            $0
+        }
+        
+        let activityIndicator = ActivityIndicator()
+        
+        let canSave = Driver.combineLatest(titleAndDetails, activityIndicator.asDriver()) {
+            return !$0.0.isEmpty && !$0.1.isEmpty && !$1
+        }
         
         let saveProperty = Driver.combineLatest(input.title, input.details, input.importanceString , input.dateString, solved) {
             $0

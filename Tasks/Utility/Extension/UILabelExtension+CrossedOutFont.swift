@@ -12,7 +12,7 @@ import UIKit
 extension UILabel {
     func setCrossOutText(_ text: String?) {
         let attributeString =  NSMutableAttributedString(string: text ?? "")
-        attributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 2, range: NSMakeRange(0, attributeString.length))
+        attributeString.addAttributes([NSStrikethroughStyleAttributeName: 2, NSBaselineOffsetAttributeName: 0.0], range: NSMakeRange(0, attributeString.length))
         self.attributedText = attributeString
     }
 }

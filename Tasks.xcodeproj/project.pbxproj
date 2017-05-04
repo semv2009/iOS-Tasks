@@ -15,6 +15,7 @@
 		EB1B53A71EB7A19200A92DA6 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53A61EB7A19200A92DA6 /* Functions.swift */; };
 		EB1B53AB1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */; };
 		EB1B53AD1EB7B26000A92DA6 /* String+DateConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */; };
+		EB82A03E1EBB99B5005A7D9E /* Importance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB82A03D1EBB99B5005A7D9E /* Importance.swift */; };
 		EBAAC30C1E997F1700698D08 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = EBAAC30A1E997F1700698D08 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBAAC30F1E997F1700698D08 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC3081E997F1700698D08 /* Domain.framework */; };
 		EBAAC3101E997F1700698D08 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBAAC3081E997F1700698D08 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -104,6 +105,7 @@
 		EB1B53A61EB7A19200A92DA6 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+stringConvertable.swift"; path = "Utility/Extension/NSDate+stringConvertable.swift"; sourceTree = "<group>"; };
 		EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+DateConvertable.swift"; path = "Utility/Extension/String+DateConvertable.swift"; sourceTree = "<group>"; };
+		EB82A03D1EBB99B5005A7D9E /* Importance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Importance.swift; path = Model/Importance.swift; sourceTree = "<group>"; };
 		EBAAC3081E997F1700698D08 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBAAC30A1E997F1700698D08 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		EBAAC30B1E997F1700698D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 				EBAAC3521E99883E00698D08 /* DomainConvertibleType.swift */,
 			);
 			name = Convertion;
+			sourceTree = "<group>";
+		};
+		EB82A03C1EBB98B8005A7D9E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				EB82A03D1EBB99B5005A7D9E /* Importance.swift */,
+			);
+			name = Modal;
 			sourceTree = "<group>";
 		};
 		EBAAC2E11E997B8500698D08 /* Utility */ = {
@@ -417,6 +427,7 @@
 			children = (
 				EBAAC38E1E9A3D5A00698D08 /* Application */,
 				EBAAC3691E998CA600698D08 /* Scenes */,
+				EB82A03C1EBB98B8005A7D9E /* Modal */,
 				EBED012A1E99590C00E99B06 /* Common */,
 				EBAAC32D1E9980DA00698D08 /* Utility */,
 				EBED01111E8FB0A300E99B06 /* Assets.xcassets */,
@@ -767,6 +778,7 @@
 				EBAAC39A1E9AB4B900698D08 /* CreateTaskViewModel.swift in Sources */,
 				EBAAC36C1E9A27A500698D08 /* TasksNavigator.swift in Sources */,
 				EBAAC3341E9980E600698D08 /* Observable+Ext.swift in Sources */,
+				EB82A03E1EBB99B5005A7D9E /* Importance.swift in Sources */,
 				EBAAC3731E9A2A8700698D08 /* TasksViewModel.swift in Sources */,
 				EBAAC3331E9980E600698D08 /* ErrorTracker.swift in Sources */,
 				EB1B53A71EB7A19200A92DA6 /* Functions.swift in Sources */,

@@ -24,8 +24,6 @@ class TaskTableViewCell: UITableViewCell {
         if task.isExecute {
             titleLabel.setCrossOutText(task.title)
             contentLabel.setCrossOutText(task.content)
-            importanceLabel.setCrossOutText(task.importance)
-            dateLabel.setCrossOutText(task.createDate?.dateString)
         }
     }
 }

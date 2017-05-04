@@ -41,9 +41,5 @@ class DefaultTasksNavigator: TasksNavigator {
     }
     
     func toTask(_ task: Task) {
-//        let vc = storyBoard.instantiateViewController(ofType: EditPostViewController.self)
-//        let viewModel = EditPostViewModel(post: post, useCase: services.getCreatePostUseCase())
-//        vc.viewModel = viewModel
-//        navigationController.pushViewController(vc, animated: true)
     }
 }

@@ -10,20 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-enum Importance: String, CustomStringConvertible {
-    case low = "Low"
-    case normal = "Normal"
-    case hight = "Hight"
-    
-    var description: String {
-        return self.rawValue
-    }
-    
-    static var source: [Importance] {
-        return [.low, .normal, .hight]
-    }
-}
-
 class CreateTaskViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
@@ -44,6 +30,7 @@ class CreateTaskViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isTranslucent = false
         configureBarButtonItems()
+        configureTextView()
         bindViewModel()
         bindTitleChanged()
         configureTextFields()
@@ -52,6 +39,12 @@ class CreateTaskViewController: UIViewController {
     func configureTextFields() {
         importanceTextField.inputView = importanceViewPicker
         dateTextField.inputView = datePicker
+    }
+    
+    func configureTextView() {
+        contentTextView.layer.borderColor = UIColor.gray.cgColor
+        contentTextView.layer.borderWidth = 1.0
+        contentTextView.layer.cornerRadius = 5.0
     }
     
     func configureBarButtonItems() {
@@ -77,7 +70,7 @@ class CreateTaskViewController: UIViewController {
                                   date: datePicker.rx.date.asObservable(),
                                   solved: executeSegmentController.rx.value.asDriver(),
                                   importanceString: importanceTextField.rx.text.orEmpty.asDriver(),
-                                  dateString: dateTextField.rx.text.orEmpty.asDriver())
+                                  dateString: dateTextField.rx.value.orEmpty.asDriver())
         
         let output = viewModel.transform(input: input)
         
