@@ -53,13 +53,13 @@ class CreateTaskViewModel {
                 self.createTaskUseCase.save(task: $0)
                     .trackActivity(activityIndicator)
                     .asDriverOnErrorJustComplete()
-        }
-        
-        let dismiss = Driver.of(save, input.cancelTrigger)
-            .merge()
+            }
             .do(onNext: navigator.toTasks)
         
-        return Output(dismiss: dismiss, saveEnabled: canSave, importanceText: importanceText, dateText: dateText)
+        let dismiss = input.cancelTrigger
+            .do(onNext: navigator.toTasks)
+        
+        return Output(save: save, dismiss: dismiss, saveEnabled: canSave, importanceText: importanceText, dateText: dateText)
     }
 }
 
@@ -77,6 +77,7 @@ extension CreateTaskViewModel {
     }
     
     struct Output {
+        let save: Driver<Void>
         let dismiss: Driver<Void>
         let saveEnabled: Driver<Bool>
         let importanceText: Observable<String>

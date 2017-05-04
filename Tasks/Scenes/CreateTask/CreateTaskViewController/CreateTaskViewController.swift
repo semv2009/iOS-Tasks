@@ -81,10 +81,12 @@ class CreateTaskViewController: UIViewController {
         
         let output = viewModel.transform(input: input)
         
+        output.save.drive()
+            .disposed(by: disposeBag)
         output.dismiss.drive()
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
         output.saveEnabled.drive(saveBarButton.rx.isEnabled)
-            .addDisposableTo(disposeBag)
+            .disposed(by: disposeBag)
         
         output.importanceText
             .bindTo(importanceTextField.rx.text)

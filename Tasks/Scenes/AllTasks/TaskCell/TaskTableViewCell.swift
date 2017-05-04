@@ -18,7 +18,14 @@ class TaskTableViewCell: UITableViewCell {
     func configureCell(with task: Task) {
         titleLabel.text = task.title
         contentLabel.text = task.content
-        importanceLabel.text =  task.createDate?.dateString
-        dateLabel.text = "\(task.isExecute)"
+        importanceLabel.text =  task.importance
+        dateLabel.text = task.createDate?.dateString
+        
+        if task.isExecute {
+            titleLabel.setCrossOutText(task.title)
+            contentLabel.setCrossOutText(task.content)
+            importanceLabel.setCrossOutText(task.importance)
+            dateLabel.setCrossOutText(task.createDate?.dateString)
+        }
     }
 }

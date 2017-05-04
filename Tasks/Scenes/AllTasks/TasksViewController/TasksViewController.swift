@@ -35,12 +35,6 @@ class TasksViewController: UIViewController {
         tableView.estimatedRowHeight = 64
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(cell: TaskTableViewCell.self)
-        
-        tableView.rx.itemSelected
-            .subscribe(onNext: { indexPath in
-                print(indexPath)
-            })
-            .disposed(by: disposebag)
     }
     
     private func bindViewModel() {

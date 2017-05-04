@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		36BA97F20FED32F74090F1BA /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2017EC5A8639C31FCCE66DD0 /* Pods_Domain.framework */; };
+		8440E76C1EBB5431000BE6F5 /* UILabelExtension+CrossedOutFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440E76B1EBB5431000BE6F5 /* UILabelExtension+CrossedOutFont.swift */; };
 		C2383FF292776E39A6407BDB /* Pods_Tasks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E663D1B6CD709ACDBE7897 /* Pods_Tasks.framework */; };
 		EB1B53A31EB7493A00A92DA6 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53A21EB7493A00A92DA6 /* PickerTextField.swift */; };
 		EB1B53A51EB798F900A92DA6 /* NativePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1B53A41EB798F900A92DA6 /* NativePickerView.swift */; };
@@ -93,6 +94,7 @@
 		33E663D1B6CD709ACDBE7897 /* Pods_Tasks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tasks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD4AAF7A4A4CEC737612B32 /* Pods-RealmPlatform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmPlatform.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmPlatform/Pods-RealmPlatform.release.xcconfig"; sourceTree = "<group>"; };
 		574CEF759A493A595F0EE9CF /* Pods-Tasks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tasks/Pods-Tasks.debug.xcconfig"; sourceTree = "<group>"; };
+		8440E76B1EBB5431000BE6F5 /* UILabelExtension+CrossedOutFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabelExtension+CrossedOutFont.swift"; path = "Utility/Extension/UILabelExtension+CrossedOutFont.swift"; sourceTree = "<group>"; };
 		9AB63E88945DC7B075D38B48 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		AEE027A9EE84FE76CE1C3E23 /* Pods-Tasks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tasks/Pods-Tasks.release.xcconfig"; sourceTree = "<group>"; };
 		DF5A40D79253A8D1DACF34EC /* Pods_RealmPlatform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RealmPlatform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +215,7 @@
 			children = (
 				EB1B53AA1EB7B1B000A92DA6 /* NSDate+stringConvertable.swift */,
 				EB1B53AC1EB7B26000A92DA6 /* String+DateConvertable.swift */,
+				8440E76B1EBB5431000BE6F5 /* UILabelExtension+CrossedOutFont.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -373,7 +376,6 @@
 			children = (
 				EBAAC3921E9AB0A300698D08 /* CreateTaskViewController */,
 				EBAAC3971E9AB45100698D08 /* CreateTaskNavigator.swift */,
-				EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */,
 			);
 			name = CreateTask;
 			sourceTree = "<group>";
@@ -383,6 +385,7 @@
 			children = (
 				EBAAC3931E9AB0E200698D08 /* CreateTaskViewController.swift */,
 				EBAAC3941E9AB0E200698D08 /* CreateTaskViewController.xib */,
+				EBAAC3991E9AB4B900698D08 /* CreateTaskViewModel.swift */,
 			);
 			name = CreateTaskViewController;
 			sourceTree = "<group>";
@@ -767,6 +770,7 @@
 				EBAAC3731E9A2A8700698D08 /* TasksViewModel.swift in Sources */,
 				EBAAC3331E9980E600698D08 /* ErrorTracker.swift in Sources */,
 				EB1B53A71EB7A19200A92DA6 /* Functions.swift in Sources */,
+				8440E76C1EBB5431000BE6F5 /* UILabelExtension+CrossedOutFont.swift in Sources */,
 				EBAAC3321E9980E600698D08 /* ActivityIndicator.swift in Sources */,
 				EB1B53A31EB7493A00A92DA6 /* PickerTextField.swift in Sources */,
 				EBED010B1E8FB0A300E99B06 /* AppDelegate.swift in Sources */,
